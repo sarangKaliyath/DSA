@@ -157,5 +157,8 @@ public class sumOfAllSubArrays {
         }
 
         System.out.println("res : " + res);
+
+        // Time O(N);
+        // Space O(1);
     }
 }
