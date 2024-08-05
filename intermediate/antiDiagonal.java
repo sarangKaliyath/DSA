@@ -113,6 +113,8 @@ public class antiDiagonal {
 
         }
 
+        // Time O(N*M); Space(O(min(n,m));
+
     }
 
     public static void antiDiagonalArray(ArrayList<ArrayList<Integer>> A, int n, int m){
@@ -157,6 +159,8 @@ public class antiDiagonal {
 
 
         System.out.println("res : " + res);
+
+        // Time O(N*M); Space O(N * M);
     }
 
 }
