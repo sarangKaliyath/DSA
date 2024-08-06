@@ -57,7 +57,7 @@ Explanation 2:
 ==> [[5]]
 
  */
-public class scalarMatrixSum {
+public class scalarMatrixProduct {
 
     public static void main (String args []){
 
