@@ -68,5 +68,8 @@ public class reverseTheString {
         }
 
         System.out.println("res : " + sb);
+
+        // Time O(N);
+        // Space O(N);
     }
 }
