@@ -39,5 +39,8 @@ public class countStringOccurrences {
         }
 
         System.out.println("Count : " + count);
+
+        // Time O(N);
+        // Space O(1);
     }
 }
