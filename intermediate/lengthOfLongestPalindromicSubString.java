@@ -39,7 +39,6 @@ public class lengthOfLongestPalindromicSubString {
         String A = "aaaabaaa";
         String [] arr = A.split("");
         int n = arr.length;
-        String res = "";
         int ans = 0;
 
         for(int i = 0; i < n; i++){
@@ -59,6 +58,9 @@ public class lengthOfLongestPalindromicSubString {
         }
 
         System.out.println(ans);
+
+        // Time O(N^2);
+        // Space O(1)
 
     }
 
