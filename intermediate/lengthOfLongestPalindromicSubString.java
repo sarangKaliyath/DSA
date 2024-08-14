@@ -39,6 +39,50 @@ public class lengthOfLongestPalindromicSubString {
         String A = "aaaabaaa";
         String [] arr = A.split("");
         int n = arr.length;
+
+        bruteForce(arr, n);
+
+        optimized(arr, n);
+
+    }
+
+
+    public static void bruteForce(String [] arr, int n){
+
+        int ans = 0;
+
+        for(int i = 0; i < n; i++){
+
+            for(int j = i; j < n; j++){
+
+                if(isPalindrome(arr, i, j)) {
+                    ans = Math.max(ans, j - i + 1);
+                }
+
+            }
+
+        }
+        System.out.println("bruteforce : " + ans);
+
+        // Time O(N^3);
+        // Space O(1);
+    }
+
+    public static boolean isPalindrome (String [] arr, int start, int end) {
+
+        while (start < end){
+
+            if( !(arr[start].equals(arr[end])) ){
+                return false;
+            }
+            start++; end--;
+        }
+
+        return true;
+    }
+
+    public  static  void optimized(String [] arr, int n){
+
         int ans = 0;
 
         for(int i = 0; i < n; i++){
@@ -46,7 +90,7 @@ public class lengthOfLongestPalindromicSubString {
             int c1 = i;
             int c2 = i;
 
-           ans = Math.max(ans, isExpanded(arr, c1, c2));
+            ans = Math.max(ans, isExpanded(arr, c1, c2));
 
         }
 
@@ -57,11 +101,10 @@ public class lengthOfLongestPalindromicSubString {
             ans = Math.max(ans, isExpanded(arr, c1, c2));
         }
 
-        System.out.println(ans);
+        System.out.println("optimized : " + ans);
 
         // Time O(N^2);
         // Space O(1)
-
     }
 
     public static int isExpanded(String [] arr, int c1, int c2){
