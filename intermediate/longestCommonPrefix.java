@@ -55,7 +55,7 @@ public class longestCommonPrefix {
         bruteForce(A, n);
 
         // Time O(N * smallestString.length);
-        // Space O(minLen);
+        // Space O(smallestString.length);
 
     }
 
