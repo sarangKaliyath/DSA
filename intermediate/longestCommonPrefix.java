@@ -88,6 +88,7 @@ public class longestCommonPrefix {
                 }
 
                 if (isPresent) res.append(A.get(0).charAt(i));
+                else break;
 
             }
 
