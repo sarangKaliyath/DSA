@@ -54,6 +54,9 @@ public class longestCommonPrefix {
 
         bruteForce(A, n);
 
+        // Time O(N * smallestString.length);
+        // Space O(minLen);
+
     }
 
     public static void bruteForce (ArrayList<String> A, int n){
