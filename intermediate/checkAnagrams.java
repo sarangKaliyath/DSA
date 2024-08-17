@@ -1,0 +1,76 @@
+import java.util.Arrays;
+
+/*
+Problem Description
+You are given two lowercase strings A and B each of length N.
+Return 1 if they are anagrams to each other and 0 if not.
+Note : Two strings A and B are called anagrams to each other if A can be formed after rearranging the letters of B.
+
+Problem Constraints
+1 <= N <= 105
+A and B are lowercase strings
+
+Input Format
+Both arguments A and B are a string.
+
+Output Format
+Return 1 if they are anagrams and 0 if not
+
+Example Input
+Input 1:
+A = "cat"
+B = "bat"
+
+Input 2:
+A = "secure"
+B = "rescue"
+
+Example Output
+Output 1: 0
+Output 2: 1
+
+Example Explanation
+For Input 1:
+The words cannot be rearranged to form the same word. So, they are not anagrams.
+
+For Input 2:
+They are an anagram.
+ */
+public class checkAnagrams {
+
+  public static  void main (String args []){
+
+      String A = "cat";
+      String B = "tacq";
+
+      char [] aArr = A.toCharArray();
+      char [] bArr = B.toCharArray();
+
+      int aLen = aArr.length;
+      int bLen = bArr.length;
+
+      if(aLen != bLen) {
+          System.out.println(" n : " + 0);
+      }
+      else{
+
+          Arrays.sort(aArr);
+          Arrays.sort(bArr);
+          boolean isAnagram = true;
+
+          for(int i = 0; i < aLen; i++){
+              if(aArr[i] != bArr[i]){
+                isAnagram = false;
+                break;
+              }
+          }
+
+          System.out.println("res : " + isAnagram);
+
+      }
+
+
+
+  }
+
+}
