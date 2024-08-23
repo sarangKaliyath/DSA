@@ -60,7 +60,7 @@ public class ContinuousSumQuery {
 
         bruteForce(A, Q, n);
 
-        optimized(A, Q,n);
+        optimized(A, Q);
 
     }
 
@@ -90,7 +90,7 @@ public class ContinuousSumQuery {
         // Time O(Q * N);
         // Space O(N);
     }
-    public static void optimized(int A, ArrayList<ArrayList<Integer>> B, int n){
+    public static void optimized(int A, ArrayList<ArrayList<Integer>> B){
 
         ArrayList<Integer> a = new ArrayList<>(A);
 
