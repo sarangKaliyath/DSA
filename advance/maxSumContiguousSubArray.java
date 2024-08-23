@@ -86,6 +86,9 @@ public class maxSumContiguousSubArray {
 
         System.out.println("maxSum : " + maxSum);
 
+        // Time O(N);
+        // Space O(1);
+
     }
 
 }
