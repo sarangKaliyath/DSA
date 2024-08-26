@@ -68,6 +68,9 @@ public class SumOfAllSubMatrices {
         }
 
         System.out.println("sum : " + sum);
+
+        // Time O(N^2);
+        // Space O(1);
     }
 
 }
