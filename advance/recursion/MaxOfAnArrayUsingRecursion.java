@@ -36,6 +36,9 @@ public class MaxOfAnArrayUsingRecursion {
         int max = betterApproach(A, 0);
 
         System.out.println(max);
+
+        // Time O(N);
+        // Space O(N);
     }
 
     public static int betterApproach(ArrayList<Integer> A, int i) {
