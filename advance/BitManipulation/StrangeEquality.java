@@ -32,46 +32,44 @@ The value of X will be 2 and the value of Y will be 8. The XOR of 2 and 8 is 10.
  */
 public class StrangeEquality {
 
-    public static void main (String args []){
+    public static void main(String args[]) {
 
-        int A = 12;
+        int A = 21;
 
         bruteForce(A);
 
         optimized(A);
     }
 
-    public static void optimized (int A){
+    public static void optimized(int A) {
 
-        /*
-            To calculate binary length of a decimal number
-                 Length = [Log (n)] + 1;
-                 where, log has base 2;
-            The Math.log computes natural log (base "e").
-         */
+        int bits = 0;
+        int x = 0;
+        int y = 0;
 
-        int len = (int) (Math.log(A) / Math.log(2) );
-
-        int y = 2 * (1 << len);
-
-        int ans = 0;
-
-        for(int i = 0; i < len; i++){
-            ans = A ^ (1 << i);
+        while (A != 0) {
+            if ((A & 1) == 0) {  // checking if A is even or odd;
+                x |= (1 << bits);
+            }
+            A >>= 1; // which also means A = A/2;
+            bits++;
         }
 
-        System.out.println(len + " y:" + y + " a" + ans);
+        y = (1 << bits);
+
+        System.out.println("x : " + x + " y : " + y + " sum : " + (x + y));
+
     }
 
-    public static  void bruteForce(int A){
+    public static void bruteForce(int A) {
 
         int X = 0;
 
-        for(int i = 4; i >= 0; i--){
+        for (int i = A - 1; i >= 0; i--) {
             int xor = i ^ A;
             int sum = i + A;
 
-            if(xor == sum){
+            if (xor == sum) {
                 X = i;
                 break;
             }
@@ -79,11 +77,11 @@ public class StrangeEquality {
 
         int Y = 0;
 
-        for(int i = A+1; i < Math.pow(10, 10); i++){
+        for (int i = A + 1; i < Math.pow(10, 10); i++) {
             int xor = i ^ A;
             int sum = i + A;
 
-            if(xor == sum){
+            if (xor == sum) {
                 Y = i;
                 break;
             }
