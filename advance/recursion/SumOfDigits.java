@@ -30,13 +30,7 @@ Explanation 2:
  */
 public class SumOfDigits {
 
-    public static int recursion(int A, int ans){
-        if(A == 0) return ans;
-
-        ans+= (int) (A%10);
-        return recursion((int) A/10, ans);
-    }
-    public static void main (String args []){
+    public static void main(String args[]) {
 
         int A = 123;
         int ans = 0;
@@ -44,6 +38,21 @@ public class SumOfDigits {
         int val = recursion(A, ans);
 
         System.out.println(val);
+
+        int res = betterApproach(A);
+        System.out.println(res);
+    }
+
+    public static int betterApproach(int A) {
+        if (A == 0) return 0;
+        return (A % 10 + betterApproach(A / 10));
+    }
+
+    public static int recursion(int A, int ans) {
+        if (A == 0) return ans;
+
+        ans += (int) (A % 10);
+        return recursion((int) A / 10, ans);
     }
 
 }
