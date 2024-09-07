@@ -13,7 +13,7 @@ Report the minimum XOR value.
 
 Problem Constraints
 2 <= length of the array <= 100000
-0 <= A[i] <= 109
+0 <= A[i] <= 10^9
 
 Input Format
 First and only argument of input contains an integer array A.
