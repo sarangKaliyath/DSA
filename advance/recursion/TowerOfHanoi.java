@@ -66,6 +66,9 @@ public class TowerOfHanoi {
         recursion(A, 1, 2, 3, result);
 
         System.out.println(result);
+
+        // Time O(2^A);
+        // Space O(2^A);
     }
 
     public  static  void recursion (int A, int firstTower, int secondTower, int thirdTower, ArrayList<ArrayList<Integer>> result){
