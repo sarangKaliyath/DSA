@@ -109,7 +109,7 @@ public class SumOfXOROfAllPairs {
         System.out.println(res);
 
         // Time O(N^2);
-        // Space O(N);
+        // Space O(1);
 
     }
 
