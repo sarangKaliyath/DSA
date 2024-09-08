@@ -57,9 +57,9 @@ We can see that this was the only unique path with minimal moves to move all dis
  */
 public class TowerOfHanoi {
 
-    public  static void main (String args []){
+    public  static void main (String [] args){
 
-        int A = 1;
+        int A = 2;
 
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
 
