@@ -35,24 +35,19 @@ Explanation 2:
  */
 public class checkPalindromeUsingRecursion {
 
-    public static int isPalindrome (String A, int start, int end){
+    public static int isPalindrome(String A, int start, int end) {
 
-        if(start >= end) {
-            return 1;
-        }
+        if (start > end) return 1;
 
-        if(A.charAt(start) == A.charAt(end)){
-            return isPalindrome(A, start + 1, end -1);
-        }
-        else {
-            return 0;
-        }
+        if (A.charAt(start) != A.charAt(end)) return 0;
+
+        return isPalindrome(A, start + 1, end - 1);
 
     }
 
-    public  static void main (String args []){
+    public static void main(String [] args) {
 
-        String A = "a";
+        String A = "ana";
 
         int res = isPalindrome(A, 0, A.length() - 1);
 
