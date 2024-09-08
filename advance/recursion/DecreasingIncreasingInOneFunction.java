@@ -18,8 +18,8 @@ Output Format
 A single line having number printed from N to 1 and then from 1 to N.
 
 Example Input
-Input 2: 1
-Input 1: 4
+Input 1: 1
+Input 2: 4
 
 Example Output
 Output 1:
@@ -32,21 +32,24 @@ public class DecreasingIncreasingInOneFunction {
 
     public static  void recursion(int A){
 
-        if(A == 1) {
-            System.out.print(1 + " " + 1 + " ");
-            return;
-        }
+        if(A == 0) return;
 
         System.out.print(A + " ");
+
         recursion(A - 1);
+
         System.out.print(A + " ");
+
     }
     public static void main (String args []){
 
         int A = 3;
 
-
         recursion(A);
+
         System.out.println();
+
+        // Time O(N):
+        // Space O(N);
     }
 }
