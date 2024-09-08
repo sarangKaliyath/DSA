@@ -4,12 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
-Q4. Last Index using Recursion
-Unsolved
-feature icon
-Using hints except Complete Solution is Penalty free now
-Use Hint
-
 Problem Description
 You are given an array A of size N.
 Write a recursive function that returns the last index at which an integer B is found in the array.
@@ -54,16 +48,29 @@ The element B = 3 is nowhere to be found in the array so we print -1
  */
 public class LastIndexUsingRecursion {
 
-    public static void main (String args []){
+    public static void main (String [] args){
 
         ArrayList<Integer> A = new ArrayList<>(Arrays.asList(6, 5, 6, 2));
-        int B = 3;
+        int B = 6;
 
         int val = findLastIndex(A, B, 0, -1);
         System.out.println(val);
-
         // Time O(N);
         // Space O(N);
+
+        int res = optimized(A, B, A.size() - 1);
+        System.out.println(res);
+        // Time O(N); This approach is better than findLastIndex since its return the index as soon as B is found;
+        // Space O(N);
+
+    }
+
+    public  static int optimized(ArrayList<Integer> A, int B, int i){
+        if(i < 0) return -1;
+
+        if(A.get(i) == B) return i;
+
+        return optimized(A, B, i - 1);
     }
 
     public  static int findLastIndex(ArrayList<Integer> A, int B, int i, int ans){
