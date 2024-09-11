@@ -1,4 +1,4 @@
-package recursion;
+package ArithmaticsAndGCD;
 /*
 
 Problem Description
