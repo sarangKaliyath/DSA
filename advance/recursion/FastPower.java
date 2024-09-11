@@ -42,18 +42,18 @@ public class FastPower {
 
         long res = powFirstApproach(A, B);
         System.out.println(res);
-        // Time O(N);
-        // Space O(N);
+        // Time O(B);
+        // Space O(B);
 
         long powSecond = powSecondApproach(A, B);
         System.out.println(powSecond);
-        // Time O(N);
-        // Space O(log N);
+        // Time O(B);
+        // Space O(log B);
 
         long powOptimized = powOptimizedApproach(A, B);
         System.out.println(powOptimized);
-        // Time O(log N);
-        // Space O(log N);
+        // Time O(log B);
+        // Space O(log B);
 
     }
 
