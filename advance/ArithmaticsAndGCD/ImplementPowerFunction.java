@@ -1,4 +1,4 @@
-package arithmaticsandGcD;
+package ArithmaticsAndGCD;
 
 /*
 
@@ -49,6 +49,8 @@ public class ImplementPowerFunction {
 
         int val = (int) recursion((A + C) % C, B, C);
         System.out.print(val);
+        // Time O(log B);
+        // Space O(log B);
     }
 
     public static long recursion (long A, long B, long C){
