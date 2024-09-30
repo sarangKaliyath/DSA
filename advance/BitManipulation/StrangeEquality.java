@@ -39,6 +39,8 @@ public class StrangeEquality {
         bruteForce(A);
 
         optimized(A);
+
+        mySolution(A);
     }
 
     public static void optimized(int A) {
@@ -56,6 +58,30 @@ public class StrangeEquality {
         }
 
         y = (1 << bits);
+
+        System.out.println("x : " + x + " y : " + y + " sum : " + (x + y));
+
+    }
+
+    public static void mySolution(int A) {
+
+        int pos = 0;
+
+        for(int i = 0; i < 32; i++){
+            if((A & (1 << i)) > 0) {
+              pos = i;
+            };
+        }
+  
+        int x = 0;
+        int bits = 0;
+  
+        for(int i = 0; i <= pos; i ++){
+          if((A & (1 << i)) == 0) x |= 1 << bits;
+          bits++;
+        }
+  
+        int y = 1 << (pos + 1);
 
         System.out.println("x : " + x + " y : " + y + " sum : " + (x + y));
 
