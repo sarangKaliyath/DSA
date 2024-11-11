@@ -12,7 +12,7 @@ Example:
 
 Problem Constraints:
 
-    1 <= A <= 109
+    1 <= A <= 10^9
 
 Example Input
 
