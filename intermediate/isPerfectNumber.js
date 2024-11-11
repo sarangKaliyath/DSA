@@ -11,7 +11,7 @@
 
     Problem Constraints
 
-        1 <= A <= 106
+        1 <= A <= 10^6
 
 
     Example Input
