@@ -9,8 +9,8 @@ An element is a leader if it is strictly greater than all the elements to its ri
 NOTE: The rightmost element is always a leader.
 
 Problem Constraints
-1 <= N <= 105
-1 <= A[i] <= 108
+1 <= N <= 10^5
+1 <= A[i] <= 10^8
 
 Input Format
 There is a single input argument which a integer array A
