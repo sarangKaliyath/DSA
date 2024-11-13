@@ -9,9 +9,9 @@ you need to find the number of subarrays in A with a sum less than B.
 We may assume that there is no overflow.
 
 Problem Constraints
-1 <= N <= 5 x 103
+1 <= N <= 5 x 10^3
 1 <= A[i] <= 1000
-1 <= B <= 107
+1 <= B <= 10^7
 
 Input Format
 First argument is an integer array A.
